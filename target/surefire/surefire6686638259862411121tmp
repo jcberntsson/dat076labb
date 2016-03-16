@@ -1,0 +1,8 @@
+#surefire
+#Sun Feb 21 19:45:28 CET 2016
+maven.ext.class.path=C\:\\Program Files\\NetBeans 8.1\\java\\maven-nblib\\netbeans-eventspy.jar
+user.dir=C\:\\Users\\Joakim\\Documents\\dat076\\jpa_shop
+file.encoding=UTF-8
+localRepository=C\:\\Users\\Joakim\\.m2\\repository
+basedir=C\:\\Users\\Joakim\\Documents\\dat076\\jpa_shop
+test=edu.chl.hajo.shop.core.TestShopPersistence

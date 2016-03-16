@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Derby (Embedded) - shop" uuid="affa688a-b4cd-4294-8e58-7725024af6e9">
+      <secret-storage>master_key</secret-storage>
+      <user-name>app</user-name>
+      <schema-pattern>*.APP</schema-pattern>
+      <default-schemas>*.APP</default-schemas>
+    </data-source>
+  </component>
+</project>
