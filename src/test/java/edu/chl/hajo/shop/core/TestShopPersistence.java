@@ -1,5 +1,6 @@
 package edu.chl.hajo.shop.core;
 
+import java.util.ArrayList;
 import java.util.List;
 import javax.enterprise.inject.Default;
 import javax.enterprise.inject.Produces;
@@ -69,6 +70,30 @@ public class TestShopPersistence {
         List<Product> ps = shop.getProductCatalogue().getByName("aaa");
         assertTrue(ps.size() > 0);
         assertTrue(ps.get(0).getName().equals(p.getName()));
+    }
+    
+    @Test
+    public void testPurchaseOrder() throws Exception {
+        Product p = new Product("aaa", 999);
+        shop.getProductCatalogue().create(p);
+        
+        Product pp = new Product("bbb", 123);
+        shop.getProductCatalogue().create(pp);
+        
+        PurchaseOrder po = new PurchaseOrder();
+        List<OrderItem> items = new ArrayList<OrderItem>();
+        OrderItem oi = new OrderItem();
+        oi.setProduct(shop.getProductCatalogue().findAll().get(0));
+        OrderItem oi2 = new OrderItem();
+        oi2.setProduct(shop.getProductCatalogue().findAll().get(1));
+        items.add(oi);
+        items.add(oi2);
+        po.setItems(items);
+        
+        shop.getOrderBook().create(po);
+        assertTrue(shop.getOrderBook().findAll().get(0).equals(po));
+        shop.getOrderBook().delete(po.getId());
+        
     }
     
 

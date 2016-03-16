@@ -3,7 +3,9 @@ package edu.chl.hajo.shop.core;
 import edu.chl.hajo.shop.persistence.AbstractEntity;
 import java.util.Date;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import lombok.Getter;
@@ -32,6 +34,7 @@ public class PurchaseOrder extends AbstractEntity {
     private Date orderDate = new Date(); // Avoid SQL99 reserved word
     @Getter
     @Setter
+    @OneToMany(cascade = CascadeType.ALL)
     private List<OrderItem> items;
     @Getter
     @Setter

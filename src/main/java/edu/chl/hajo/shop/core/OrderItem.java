@@ -1,6 +1,7 @@
 package edu.chl.hajo.shop.core;
 
 import edu.chl.hajo.shop.persistence.AbstractEntity;
+import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import lombok.Getter;
 import lombok.Setter;

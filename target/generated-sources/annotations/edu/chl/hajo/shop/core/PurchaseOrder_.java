@@ -10,7 +10,7 @@ import javax.persistence.metamodel.ListAttribute;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="EclipseLink-2.5.1.v20130918-rNA", date="2016-03-10T14:40:11")
+@Generated(value="EclipseLink-2.5.1.v20130918-rNA", date="2016-03-16T10:02:28")
 @StaticMetamodel(PurchaseOrder.class)
 public class PurchaseOrder_ extends AbstractEntity_ {
 
